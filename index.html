@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triveni | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:#020617;color:#e5e7eb}
+
+header{position:fixed;width:100%;top:0;background:rgba(2,6,23,0.8);backdrop-filter:blur(12px);border-bottom:1px solid #1f2933;z-index:999}
+nav{max-width:1150px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+nav h2{font-weight:700;letter-spacing:1px}
+nav ul{display:flex;gap:22px;list-style:none}
+nav a{text-decoration:none;color:#9ca3af;font-weight:500;transition:.3s}
+nav a:hover{color:white}
+
+section{max-width:1150px;margin:auto;padding:110px 20px}
+
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at top,#0f172a,#020617)}
+.hero-box{max-width:750px}
+.hero h1{font-size:52px;font-weight:700;line-height:1.2}
+.hero span{background:linear-gradient(90deg,#38bdf8,#22c55e);-webkit-background-clip:text;color:transparent}
+.hero p{color:#9ca3af;margin:18px 0 28px}
+
+.btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.btn{padding:12px 28px;border-radius:14px;border:1px solid #38bdf8;color:#38bdf8;text-decoration:none;transition:.3s}
+.btn.primary{background:linear-gradient(135deg,#38bdf8,#22c55e);color:#020617;border:none}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(56,189,248,.3)}
+
+h2{font-size:36px;margin-bottom:35px;text-align:center}
+
+.about p{text-align:center;color:#9ca3af;max-width:800px;margin:auto;font-size:17px;line-height:1.7}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:22px}
+.skill-card{background:linear-gradient(145deg,#020617,#0f172a);padding:22px;border-radius:18px;text-align:center;border:1px solid #1f2933;transition:.4s}
+.skill-card:hover{transform:translateY(-8px) scale(1.03);border-color:#38bdf8}
+
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
+.project-card{background:linear-gradient(160deg,#020617,#0b1220);padding:26px;border-radius:20px;border:1px solid #1f2933;position:relative;overflow:hidden;transition:.4s}
+.project-card::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent,#38bdf833,transparent);opacity:0;transition:.4s}
+.project-card:hover::before{opacity:1}
+.project-card:hover{transform:translateY(-10px)}
+.project-card h3{margin-bottom:10px}
+.project-card p{color:#9ca3af;font-size:15px}
+
+.education{display:grid;gap:18px;max-width:700px;margin:auto}
+.edu-card{background:#020617;border:1px solid #1f2933;border-radius:16px;padding:18px}
+
+.contact{text-align:center}
+.contact p{margin:8px 0;color:#9ca3af}
+.contact a{color:#38bdf8;text-decoration:none}
+
+footer{text-align:center;padding:25px;border-top:1px solid #1f2933;color:#6b7280}
+
+.reveal{opacity:0;transform:translateY(40px);transition:1s}
+.reveal.active{opacity:1;transform:none}
+
+@media(max-width:768px){.hero h1{font-size:36px}nav ul{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<h2>Triveni</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-box reveal">
+<h1>Hi, I'm <span>Triveni</span></h1>
+<h1>Aspiring Software Engineer</h1>
+<p>Python • Java • SQL • Web Development</p>
+<div class="btns">
+<a href="#projects" class="btn primary">View Projects</a>
+<a href="#contact" class="btn">Contact Me</a>
+<a href="resume.pdf" class="btn" download>Download Resume</a>
+</div>
+</div>
+</section>
+
+<section id="about" class="about reveal">
+<h2>About Me</h2>
+<p>I am an aspiring software engineer with a strong foundation in Python, Java, C, SQL, and web technologies. I enjoy building real-world projects, improving problem‑solving skills, and continuously learning new tools to grow as a professional developer.</p>
+</section>
+
+<section id="skills" class="reveal">
+<h2>Skills</h2>
+<div class="skills-grid">
+<div class="skill-card">Python</div>
+<div class="skill-card">Java</div>
+<div class="skill-card">C</div>
+<div class="skill-card">SQL</div>
+<div class="skill-card">HTML & CSS</div>
+<div class="skill-card">JavaScript</div>
+</div>
+</section>
+
+<section id="projects" class="reveal">
+<h2>Projects</h2>
+<div class="projects">
+<div class="project-card">
+<h3>Student Management System</h3>
+<p>Python-based system with CRUD operations and file handling to efficiently manage student records.</p>
+</div>
+<div class="project-card">
+<h3>Personal Portfolio Website</h3>
+<p>Responsive website showcasing projects, skills, and contact information.</p>
+</div>
+<div class="project-card">
+<h3>Employee Database Management</h3>
+<p>Database-driven application using Python and SQL with secure record management.</p>
+</div>
+</div>
+</section>
+
+<section id="education" class="reveal">
+<h2>Education</h2>
+<div class="education">
+<div class="edu-card"><strong>B.Tech – Narasaraopeta Engineering College</strong><br>CGPA: 8.86</div>
+<div class="edu-card"><strong>Intermediate – Government Junior College</strong><br>CGPA: 8.4</div>
+<div class="edu-card"><strong>SSC – Zilla Parishad High School</strong><br>CGPA: 9.5</div>
+</div>
+</section>
+
+<section id="contact" class="contact reveal">
+<h2>Contact</h2>
+<p>📞 +91 9059497564</p>
+<p>📧 kothakotagvntriveni@gmail.com</p>
+<p><a href="https://www.linkedin.com/in/gvntrivenikothakota" target="_blank">LinkedIn Profile</a></p>
+</section>
+
+<footer>© 2026 Triveni. All rights reserved.</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+function reveal(){
+for(let i=0;i<reveals.length;i++){
+let wh=window.innerHeight;
+let top=reveals[i].getBoundingClientRect().top;
+if(top<wh-100){reveals[i].classList.add('active');}
+}}
+window.addEventListener('scroll',reveal);reveal();
+
+document.querySelector('footer').innerHTML=`© ${new Date().getFullYear()} Triveni. All rights reserved.`;
+</script>
+
+</body>
+</html>
